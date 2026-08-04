@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1785781631701,
+      "tag": "0000_cynical_kitty_pryde",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1785788460300,
+      "tag": "0001_smart_slipstream",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1785860025767,
+      "tag": "0002_normal_piledriver",
+      "breakpoints": true
+    }
+  ]
+}
