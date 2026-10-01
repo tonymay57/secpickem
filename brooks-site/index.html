@@ -1,0 +1,212 @@
+<title>Lake Martin Electrical Market</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Bebas+Neue&family=Inter:wght@400;500;700&display=swap">
+<style>
+/* Layout: single reading column (~70ch) with a full-bleed figures strip and one wide table; Brooks red used only for rules, labels and the mockup call-to-action. */
+:root{
+  --bg:#FFFFFF; --surface:#F4F4F4; --fg:#171717; --muted:#5E6164; --line:#DCDDDE; --accent:#E50E20; --accent-fg:#FFFFFF; --ink-band:#171717; --ink-band-fg:#FFFFFF;
+  --display:"Michroma","Eurostile Extended",Arial,sans-serif;
+  --cond:"Bebas Neue","Oswald",Impact,"Arial Narrow",sans-serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#131313;--surface:#1D1D1E;--fg:#ECECEC;--muted:#A3A6A9;--line:#323335;--accent:#FF3343;--accent-fg:#FFFFFF;--ink-band:#000000;--ink-band-fg:#FFFFFF;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#131313;--surface:#1D1D1E;--fg:#ECECEC;--muted:#A3A6A9;--line:#323335;--accent:#FF3343;--accent-fg:#FFFFFF;--ink-band:#000000;--ink-band-fg:#FFFFFF;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.65 var(--body);margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.col{max-width:780px;margin:0 auto;padding-inline:clamp(16px,4vw,32px)}
+h1,h2,h3{text-wrap:balance;margin:0}
+.label{font:400 15px/1 var(--cond);letter-spacing:.14em;color:var(--accent);text-transform:uppercase}
+
+.masthead{background:var(--ink-band);color:var(--ink-band-fg);border-bottom:4px solid var(--accent)}
+.masthead .col{padding-block:44px 36px;display:grid;gap:14px}
+.masthead h1{font:400 clamp(24px,4.2vw,38px)/1.2 var(--display)}
+.masthead p{margin:0;color:#BFC1C3;max-width:60ch}
+.meta{display:flex;flex-wrap:wrap;gap:6px 22px;font:400 15px/1 var(--cond);letter-spacing:.12em;color:#9C9FA2}
+.cta{display:inline-flex;align-items:center;gap:10px;align-self:start;background:var(--accent);color:var(--accent-fg);text-decoration:none;font:400 19px/1 var(--cond);letter-spacing:.1em;padding:13px 20px;margin-top:8px}
+.cta:hover{filter:brightness(1.1)}
+
+main section{padding-block:40px;border-bottom:1px solid var(--line)}
+main section:last-of-type{border-bottom:0}
+h2{font:400 clamp(20px,2.6vw,26px)/1.25 var(--display);margin-top:8px}
+h3{font:700 17px/1.3 var(--body);margin-top:26px}
+p,li{max-width:68ch}
+ul{padding-left:20px}
+li{margin-block:6px}
+.verdict{font-size:18px;line-height:1.6;border-left:4px solid var(--accent);padding:4px 0 4px 18px;margin-top:18px}
+
+.figs{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:22px}
+.fig{background:var(--surface);padding:16px;min-width:0}
+.fig b{display:block;font:400 30px/1 var(--cond);letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.fig span{display:block;font-size:13px;color:var(--muted);line-height:1.4;margin-top:6px}
+@media (max-width:640px){.figs{grid-template-columns:repeat(2,1fr)}}
+
+.tbl{overflow-x:auto;margin-top:18px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:400 15px/1 var(--cond);letter-spacing:.12em;color:var(--muted);background:var(--surface)}
+tr:last-child td{border-bottom:0}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.niche{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:18px}
+.niche div{background:var(--bg);padding:16px 18px;min-width:0}
+.niche h3{margin:0 0 6px;font:400 19px/1.1 var(--cond);letter-spacing:.08em}
+.niche p{margin:0;font-size:14.5px;color:var(--muted)}
+@media (max-width:640px){.niche{grid-template-columns:1fr}}
+
+ol.recs{padding-left:22px}
+ol.recs li{padding-left:4px}
+.note{background:var(--surface);padding:14px 18px;font-size:14.5px;color:var(--muted);margin-top:18px}
+.sources{font-size:13.5px;columns:2;column-gap:28px;padding-left:18px}
+.sources li{break-inside:avoid;margin-block:4px}
+@media (max-width:640px){.sources{columns:1}}
+footer{background:var(--ink-band);color:#9C9FA2;font:400 14px/1 var(--cond);letter-spacing:.12em}
+footer .col{padding-block:20px}
+</style>
+
+<header class="masthead">
+  <div class="col">
+    <div class="label">Market research · October 2026</div>
+    <h1>Electrical Work Around Lake Martin, Alabama</h1>
+    <p>Residential and commercial demand, competitors, pricing and website strategy for Brooks Electrical Company in Tallapoosa, Elmore and Coosa counties.</p>
+    <div class="meta"><span>Prepared for Brooks Electrical Company</span><span>Public sources, Sept–Oct 2026</span></div>
+    <a class="cta" href="mockup.html">VIEW THE WEBSITE MOCKUP →</a>
+  </div>
+</header>
+
+<main class="col">
+<section>
+  <div class="label">Summary</div>
+  <h2>The opportunity</h2>
+  <p class="verdict">Lake Martin is a strong market for an electrician. The opening is to be the area's dock, lake-home and generator specialist. None of the local competitors I found markets itself that way.</p>
+  <div class="figs">
+    <div class="fig"><b>$1.3M</b><span>Waterfront median sale, Aug 2026 (+38% YoY)</span></div>
+    <div class="fig"><b>$403M</b><span>Waterfront sales volume, 12 months (+21.7%)</span></div>
+    <div class="fig"><b>−20%</b><span>Waterfront inventory, 12 months</span></div>
+    <div class="fig"><b>40,700</b><span>Tallapoosa County residents, 23,600 housing units</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="label">Demand</div>
+  <h2>Where the work comes from</h2>
+
+  <h3>Lake homes (largest segment by dollar value)</h3>
+  <ul>
+    <li>Waterfront prices are rising fast and inventory is tight. Owners renovate and upgrade instead of selling, and builders put premium homes on the lots that remain.</li>
+    <li>More owners live at the lake year-round. That means larger services, HVAC circuits, standby generators, smart-home wiring and EV chargers.</li>
+    <li>Active developments include Russell Lands' <b>The Ridge Island</b> (16 estate lots released July 2026, about 50 planned), plus Miner's Cove Phase III, Kennebec, White Oak Landing and Wicker Point. New lots are coming from Parker Creek to Dennis Creek.</li>
+    <li>Most new-construction work comes through builders. Builder relationships matter as much as the website.</li>
+  </ul>
+
+  <h3>Wider area (everyday residential)</h3>
+  <ul>
+    <li>Tallapoosa County's median household income is about $59K and the median owner-occupied home value is about $158K.</li>
+    <li>Off the water, the market is price-sensitive: service calls, panel upgrades, older homes and repairs. Speed, reliability and upfront pricing win here.</li>
+  </ul>
+
+  <h3>Commercial and industrial</h3>
+  <ul>
+    <li><b>Alexander City:</b> a roughly 30-acre commercial corridor with up to $7.5M of city infrastructure, a 17.7-acre B-3/I-1 mixed-use site, Holiday Inn Express and La Quinta hotels, The Legacy at Russell Medical Center, and Gateway to Lake Martin.</li>
+    <li><b>Dadeville:</b> a reviving downtown with new shops, the renovated Miller Hotel, and a planned 500-seat civic center.</li>
+    <li><b>Kellyton:</b> Westwater's $202M graphite plant has been under construction since 2021. It's a large-contractor job, but a possible maintenance or subcontract opportunity later.</li>
+    <li><b>Lake businesses:</b> marinas, restaurants, short-term rentals and HOAs need recurring maintenance that evens out seasonal swings.</li>
+  </ul>
+</section>
+
+<section>
+  <div class="label">Positioning</div>
+  <h2>Services specific to the lake</h2>
+  <div class="niche">
+    <div><h3>DOCK &amp; BOAT LIFT WIRING</h3><p>GFCI subpanels, lift motors, lighting and shore power. Docks sit on Alabama Power shoreline and need a permit that takes 4–8 weeks. Explaining that process shows expertise.</p></div>
+    <div><h3>SHOCK-DROWNING PREVENTION</h3><p>Alabama has had documented deaths, and Lake Martin Boaters has tested in-water detectors. A spring dock safety inspection is an easy sell and a reason to market every year.</p></div>
+    <div><h3>STANDBY GENERATORS</h3><p>Rural lines and storms drive demand. I found no Generac dealer marketing to Lake Martin. Confirm with Generac's dealer locator.</p></div>
+    <div><h3>OWNERS WHO LIVE ELSEWHERE</h3><p>Many owners live in Birmingham, Montgomery or Atlanta. Photo reports, remote scheduling and seasonal openings and closings are rarely advertised locally.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="label">Competitors</div>
+  <h2>Who's already here</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Company</th><th>Emphasis</th><th>Gap Brooks can fill</th></tr></thead>
+    <tbody>
+      <tr><td>C&amp;T Electric</td><td>15+ years at Lake Martin, emergency service and repairs</td><td>No lake or dock specialty in its marketing</td></tr>
+      <tr><td>Whitworth Electric</td><td>East Central Alabama, renovations, urgent repairs</td><td>General message, no published pricing</td></tr>
+      <tr><td>Dixie Electric, Plumbing &amp; Air</td><td>Large multi-trade company, "100+ years," strong search ranking</td><td>Not a lake specialist, so local and personal service sets Brooks apart</td></tr>
+      <tr><td>Specialized Electrical Solutions</td><td>Town pages (for example, Equality) for local search</td><td>Brooks can match this with a page for each town</td></tr>
+      <tr><td>Others on Yelp</td><td>Agee, T&amp;D, B&amp;B, Bill's, PLH, MKM Electric</td><td>Mostly little online presence</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">The competitors' websites were blocked from the research environment, so this table comes from search listings. Check their Google Business Profiles and review counts before launch.</p>
+</section>
+
+<section>
+  <div class="label">Pricing &amp; licensing</div>
+  <h2>What the market pays</h2>
+  <ul>
+    <li>Residential service in Alabama typically runs <b>$50–$100/hr</b>, and up to $200/hr for specialty work. Electricians earn about $27–$32/hr as employees.</li>
+    <li>The mockup's estimate ranges add a premium for lake and specialty work. Brooks should replace them with its own numbers before launch.</li>
+    <li>An Alabama electrical contractor license requires 8,000 hours of experience, an exam based on the 2020 NEC, annual renewal, and 14 hours of continuing education every 2 years. Show the license number on every page.</li>
+  </ul>
+  <div class="tbl"><table>
+    <thead><tr><th>Mockup price ranges (planning only)</th><th>Range</th></tr></thead>
+    <tbody>
+      <tr><td>Service call and troubleshooting</td><td class="num">$95–$175</td></tr>
+      <tr><td>Panel upgrade to 200A</td><td class="num">$2,200–$4,500</td></tr>
+      <tr><td>Standby generator, 22–26kW, installed</td><td class="num">$11,000–$18,000</td></tr>
+      <tr><td>Dock electrical package</td><td class="num">$3,800–$9,500</td></tr>
+      <tr><td>Dock safety inspection</td><td class="num">$175–$325</td></tr>
+      <tr><td>EV charger, Level 2</td><td class="num">$800–$2,200</td></tr>
+      <tr><td>New custom lake home wiring</td><td class="num">$7–$12 / sq ft</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <div class="label">Recommendations</div>
+  <h2>What the website should do</h2>
+  <ol class="recs">
+    <li><b>Lead with the lake.</b> Present Brooks as the Lake Martin dock, lake-home and generator specialist, with full residential and commercial service underneath.</li>
+    <li><b>Give each service its own page:</b> docks and lifts, dock safety inspections, generators, panel upgrades, EV chargers, new construction, commercial, and rental maintenance plans.</li>
+    <li><b>Give each town its own page:</b> Alexander City, Dadeville, Eclectic, Jacksons Gap, Kellyton, Equality, Wetumpka, plus Willow Point, The Ridge and Kowaliga.</li>
+    <li><b>Serve owners who live elsewhere:</b> online booking, text and photo updates, and seasonal packages.</li>
+    <li><b>Show proof:</b> license number, insurance, Google reviews, photos of finished docks, and a spring safety campaign every year.</li>
+    <li><b>Add a builder and commercial section:</b> a project gallery, a bid request form, and bonding and crew details.</li>
+  </ol>
+  <p class="note">Still unverified: the share of second homes, search volume for each service, and competitor review counts. Check Google Business Profiles and run a keyword tool before writing final copy.</p>
+</section>
+
+<section>
+  <div class="label">Sources</div>
+  <ul class="sources">
+    <li><a href="https://www.lakemartinrealty.com/blog/market-report-42/">Lake Martin Realty – Market Report</a></li>
+    <li><a href="https://lakemartinvoice.com/2026/05/05/lake-martin-market-report-for-2025/">Lake Martin Voice – 2025 Market Report</a></li>
+    <li><a href="https://lifeonlakemartin.com/beyond-the-summer-home-lake-martin-is-defying-national-trends/">Life on Lake Martin – Market Trends</a></li>
+    <li><a href="https://www.realestatelakemartin.com/waterfront-lots-2026/">Waterfront Lots Coming in 2026</a></li>
+    <li><a href="https://www.russelllands.com/blog/phase-1-of-the-ridge-island-is-here/">Russell Lands – Ridge Island Phase 1</a></li>
+    <li><a href="https://www.alexandercityal.gov/community-dev/page/development-projects">Alexander City – Development Projects</a></li>
+    <li><a href="https://www.alexandercityal.gov/citycouncil/meeting/special-called-meeting-3">Alexander City – Council Meeting</a></li>
+    <li><a href="https://www.commercialcafe.com/commercial-property/us/al/alexander-city/alexander-city-mixed-use-development-site-17-7-acres/">Alexander City Mixed-Use Site</a></li>
+    <li><a href="https://www.waka.com/2026/05/13/city-of-dadeville-moves-one-step-closer-to-building-a-new-civic-center/">WAKA – Dadeville Civic Center</a></li>
+    <li><a href="https://explorelakemartin.com/dive-downtown-dadeville/">Explore Lake Martin – Downtown Dadeville</a></li>
+    <li><a href="https://www.sec.gov/Archives/edgar/data/839470/000110465926032111/wwr-20251231x10k.htm">Westwater Resources 10-K</a></li>
+    <li><a href="https://www.census.gov/quickfacts/fact/table/tallapoosacountyalabama/PST045223">Census QuickFacts – Tallapoosa County</a></li>
+    <li><a href="https://www.tradesmanco.com/permits/">Tradesman Docks – Permits</a></li>
+    <li><a href="https://caec.coop/tips/electric-shock-drowning-need-know/">CAEC – Electric Shock Drowning</a></li>
+    <li><a href="https://lakemartinboaters.com/2024/08/22/electric-shock-detection-wavelink-secure/">Lake Martin Boaters – Wavelink</a></li>
+    <li><a href="https://www.yelp.com/search?cflt=electricians&find_loc=Lake+Martin,+AL">Yelp – Lake Martin Electricians</a></li>
+    <li><a href="https://calldixie.com/locations/lake-martin/electrical/">Dixie – Lake Martin</a></li>
+    <li><a href="https://whitworthelectric.com/electrical-services-in-lake-martin/">Whitworth Electric</a></li>
+    <li><a href="https://www.candtelectricllc.com/">C&amp;T Electric</a></li>
+    <li><a href="https://www.specializedelectricalsolutions.com/equality-al/">Specialized Electrical Solutions</a></li>
+    <li><a href="https://www.ziprecruiter.com/Salaries/Electrician-Salary--in-Alabama">ZipRecruiter – AL Electrician Pay</a></li>
+    <li><a href="https://www.biddaro.com/us/cost/electrical/birmingham">Biddaro – Birmingham Electrical Costs</a></li>
+    <li><a href="https://www.law.cornell.edu/regulations/alabama/Ala-Admin-Code-r-303-X-2-.01">Ala. Admin. Code r. 303-X-2-.01</a></li>
+    <li><a href="https://www.housecallpro.com/electrical/licensing/alabama/">Housecall Pro – AL Licensing</a></li>
+  </ul>
+</section>
+</main>
+<footer><div class="col">BROOKS ELECTRICAL COMPANY · WIRED RIGHT. BUILT TO LAST.</div></footer>
