@@ -1,0 +1,183 @@
+<title>Brooks Website Payoff</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one printable sheet. Black brand band with the one big promise, then three plain-language blocks (win work / run the day / growing market), a "simple math" strip with four editable example numbers, and next steps. Single committed brand look (Brooks board), not theme-switched. */
+:root{
+  --red:#E50E20; --black:#171717; --white:#FFFFFF; --steel:#6D7073; --light:#F2F2F2; --line:#DCDDDE; --ink2:#3F4244;
+  --display:"Michroma","Eurostile Extended",Arial,sans-serif;
+  --cond:"Bebas Neue","Oswald",Impact,"Arial Narrow",sans-serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--light);color:var(--black);font:16px/1.55 var(--body)}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+h1,h2,h3{margin:0;text-wrap:balance}
+.sheet{max-width:960px;margin:0 auto;background:var(--white);border-inline:1px solid var(--line)}
+.pad{padding-inline:clamp(16px,4vw,44px)}
+.label{font:400 15px/1 var(--cond);letter-spacing:.14em;color:var(--red);text-transform:uppercase}
+
+.top{background:var(--black);color:var(--white);border-bottom:5px solid var(--red);padding-block:28px 30px;display:grid;gap:18px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand svg{width:26px;height:38px;flex:none}
+.brand b{display:block;font:400 18px/1 var(--display)}
+.brand small{display:block;font:400 8.5px/1.5 var(--display);color:var(--red);letter-spacing:.08em}
+.top h1{font:400 clamp(24px,4vw,36px)/1.2 var(--display);max-width:22ch}
+.top h1 em{font-style:normal;color:var(--red)}
+.top p{margin:0;color:#c9cacb;max-width:58ch;font-size:17px}
+
+.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-bottom:1px solid var(--line)}
+.three > div{padding:24px clamp(16px,2.6vw,28px);border-right:1px solid var(--line);display:grid;gap:10px;align-content:start;min-width:0}
+.three > div:last-child{border-right:0}
+.three h2{font:400 24px/1.05 var(--cond);letter-spacing:.06em}
+.three ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.three li{display:grid;grid-template-columns:16px 1fr;gap:8px;font-size:15px;color:var(--ink2)}
+.three li svg{width:14px;height:14px;margin-top:4px}
+.three li b{color:var(--black);font-weight:600}
+@media (max-width:760px){.three{grid-template-columns:1fr}.three > div{border-right:0;border-bottom:1px solid var(--line)}.three > div:last-child{border-bottom:0}}
+
+.math{padding-block:26px;display:grid;gap:16px;border-bottom:1px solid var(--line)}
+.math h2{font:400 clamp(18px,2.4vw,22px)/1.25 var(--display)}
+.inputs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.inputs label{display:grid;gap:5px;font-size:13px;color:var(--steel)}
+.inputs .field{display:flex;align-items:center;border:1px solid #c4c6c8;background:var(--white)}
+.inputs .field span{padding:0 0 0 10px;color:var(--steel);font-weight:600}
+.inputs input{width:100%;min-width:0;border:0;padding:10px;font:600 17px var(--body);font-variant-numeric:tabular-nums;color:var(--black);background:transparent}
+@media (max-width:760px){.inputs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.answers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.answers div{background:var(--white);padding:16px 18px;display:grid;gap:4px;min-width:0}
+.answers b{font:400 clamp(30px,4.6vw,44px)/1 var(--cond);letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.answers div:first-child{background:var(--black);color:var(--white)}
+.answers div:first-child b{color:var(--red)}
+.answers div:first-child span{color:#c9cacb}
+.answers span{font-size:14px;color:var(--ink2)}
+@media (max-width:640px){.answers{grid-template-columns:1fr}}
+.jobs{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13px;color:var(--steel)}
+.jobs i{display:inline-block;width:22px;height:22px;background:var(--red);clip-path:polygon(60% 0,15% 58%,45% 58%,35% 100%,85% 38%,55% 38%)}
+.small{font-size:13px;color:var(--steel);margin:0;max-width:75ch}
+
+.bottom{display:grid;grid-template-columns:1.1fr .9fr;gap:0}
+.bottom > div{padding:24px clamp(16px,2.6vw,28px);display:grid;gap:12px;align-content:start;min-width:0}
+.bottom > div + div{border-left:1px solid var(--line);background:var(--light)}
+.bottom h2{font:400 24px/1.05 var(--cond);letter-spacing:.06em}
+.bottom ol{margin:0;padding-left:22px;display:grid;gap:8px;font-size:15px}
+.bottom ol li::marker{font-weight:700;color:var(--red)}
+.quote{font:400 clamp(20px,2.6vw,26px)/1.2 var(--cond);letter-spacing:.04em;margin:0}
+.quote em{font-style:normal;color:var(--red)}
+.links{display:grid;gap:6px;font-size:14px}
+.links a{color:var(--black);font-weight:600}
+@media (max-width:760px){.bottom{grid-template-columns:1fr}.bottom > div + div{border-left:0;border-top:1px solid var(--line)}}
+footer{background:var(--black);color:#a9abad;font:400 14px/1 var(--cond);letter-spacing:.12em;padding-block:16px}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="plug" viewBox="0 0 60 88"><rect x="13" y="0" width="8" height="20" rx="3" fill="#E50E20"/><rect x="39" y="0" width="8" height="20" rx="3" fill="#E50E20"/><path d="M4 18h52v26c0 13-10 23-20 25v19H24V69C14 67 4 57 4 44z" fill="#E50E20"/><path d="M33 24 20 47h9l-4 17 15-25h-9l5-15z" fill="#fff"/></symbol>
+  <symbol id="bolt" viewBox="0 0 20 20"><path d="M12 1 3 12h6l-2 7 10-12h-6l2-6z" fill="#E50E20"/></symbol>
+</svg>
+
+<div class="sheet">
+  <header class="top pad">
+    <div class="brand"><svg><use href="#plug"/></svg><span><b>BROOKS</b><small>ELECTRICAL COMPANY</small></span></div>
+    <h1>A website and crew app that <em>pay for themselves</em> in a few jobs.</h1>
+    <p>Here's what you get, why now is a good time at Lake Martin, and the simple math, all on one page.</p>
+  </header>
+
+  <section class="three">
+    <div>
+      <div class="label">The website</div>
+      <h2>WIN MORE WORK</h2>
+      <ul>
+        <li><svg><use href="#bolt"/></svg><span><b>Get found on Google.</b> People search "electrician near me" and "dock electrician Lake Martin." You show up.</span></li>
+        <li><svg><use href="#bolt"/></svg><span><b>Take requests 24/7.</b> Customers ask for a free estimate while you're on a job or asleep.</span></li>
+        <li><svg><use href="#bolt"/></svg><span><b>Look as solid as the big companies.</b> Your license, insurance and work photos are on every page.</span></li>
+        <li><svg><use href="#bolt"/></svg><span><b>Reach lake owners who live elsewhere</b> in Birmingham, Montgomery and Atlanta, who book everything online.</span></li>
+      </ul>
+    </div>
+    <div>
+      <div class="label">The crew app</div>
+      <h2>RUN THE DAY EASIER</h2>
+      <ul>
+        <li><svg><use href="#bolt"/></svg><span><b>No lost leads.</b> Every request lands in one inbox instead of voicemails and sticky notes.</span></li>
+        <li><svg><use href="#bolt"/></svg><span><b>Crews see today's jobs</b> with the address, phone and scope on their phone.</span></li>
+        <li><svg><use href="#bolt"/></svg><span><b>Know where every job stands</b> (scheduled, on site, needs parts, done) without a phone call.</span></li>
+        <li><svg><use href="#bolt"/></svg><span><b>See your open estimates</b> and their dollar value at a glance.</span></li>
+      </ul>
+    </div>
+    <div>
+      <div class="label">The market</div>
+      <h2>THE LAKE IS GROWING</h2>
+      <ul>
+        <li><svg><use href="#bolt"/></svg><span><b>Lake homes are worth more than ever.</b> The typical waterfront sale hit $1.3 million in August 2026, up 38% in a year.</span></li>
+        <li><svg><use href="#bolt"/></svg><span><b>New neighborhoods are being built,</b> including The Ridge Island, Miner's Cove and White Oak Landing. Every new home needs an electrician.</span></li>
+        <li><svg><use href="#bolt"/></svg><span><b>More people live there year-round,</b> so they need generators, panel upgrades and EV chargers.</span></li>
+        <li><svg><use href="#bolt"/></svg><span><b>Businesses are coming</b> to Alexander City and Dadeville, including new hotels, a 30-acre retail corridor and a civic center.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="math pad">
+    <div>
+      <div class="label">The simple math</div>
+      <h2>HOW FAST DOES IT PAY FOR ITSELF?</h2>
+    </div>
+    <div class="inputs">
+      <label for="in-build">One-time build cost<div class="field"><span>$</span><input id="in-build" inputmode="numeric" value="3000"></div></label>
+      <label for="in-month">Monthly cost (hosting, domain)<div class="field"><span>$</span><input id="in-month" inputmode="numeric" value="50"></div></label>
+      <label for="in-job">Average job<div class="field"><span>$</span><input id="in-job" inputmode="numeric" value="650"></div></label>
+      <label for="in-extra">Extra jobs a month from the site<div class="field"><input id="in-extra" inputmode="numeric" value="2"></div></label>
+    </div>
+    <div class="answers" aria-live="polite">
+      <div><b id="out-months">3 months</b><span>until the first year's cost is covered</span></div>
+      <div><b id="out-jobs">6 jobs</b><span>pay for the whole first year</span></div>
+      <div><b id="out-year">$15,600</b><span>in new work in year one</span></div>
+    </div>
+    <div class="jobs" id="job-icons" aria-hidden="true"></div>
+    <p class="small">These are example numbers; change any box to try your own. One generator or dock job can cover the whole year on its own. The app also saves time: if it cuts 30 minutes a day of calls and texts, that's about 10 hours a month back. "New work" means money from jobs before materials and labor, not profit.</p>
+  </section>
+
+  <section class="bottom">
+    <div>
+      <div class="label">Getting started</div>
+      <h2>FIVE STEPS TO LAUNCH</h2>
+      <ol>
+        <li>Look over the design and tell us what to change.</li>
+        <li>Send your license number, logo files and 10 to 20 job photos.</li>
+        <li>Launch the site on your own web address, such as brookselectrical.com.</li>
+        <li>Set up your free Google Business Profile and start asking happy customers for reviews.</li>
+        <li>Spend 30 minutes showing your crew the app.</li>
+      </ol>
+    </div>
+    <div>
+      <p class="quote">EVERY REQUEST IN ONE PLACE.<br><em>EVERY CREW ON THE SAME PAGE.</em></p>
+      <p class="small">Most of your competitors don't advertise dock work, generators or service for owners who live away. That gives Brooks a clear spot to own.</p>
+      <div class="links">
+        <a href="https://claude.ai/artifact/VMXs9ept1VLVXjShGrPwo7">See the website and crew app mockup →</a>
+        <a href="https://claude.ai/artifact/QPMucjsYZGdNuienvhsJKP">Read the full market report →</a>
+      </div>
+    </div>
+  </section>
+  <footer class="pad">BROOKS ELECTRICAL COMPANY · WIRED RIGHT. BUILT TO LAST.</footer>
+</div>
+
+<script>
+const ids=['in-build','in-month','in-job','in-extra'];
+const num=id=>{const v=parseFloat(String(document.getElementById(id).value).replace(/[^0-9.]/g,''));return isFinite(v)&&v>=0?v:0};
+const money=n=>'$'+Math.round(n).toLocaleString('en-US');
+function calc(){
+  const build=num('in-build'),month=num('in-month'),job=num('in-job'),extra=num('in-extra');
+  const yearCost=build+12*month;
+  const jobsNeeded=job>0?Math.ceil(yearCost/job):0;
+  const months=extra>0?Math.max(1,Math.ceil(jobsNeeded/extra)):null;
+  document.getElementById('out-months').textContent=months===null?'—':months>24?'2+ years':months+(months===1?' month':' months');
+  document.getElementById('out-jobs').textContent=job>0?jobsNeeded+(jobsNeeded===1?' job':' jobs'):'—';
+  document.getElementById('out-year').textContent=money(extra*12*job);
+  const n=Math.min(jobsNeeded,40);
+  document.getElementById('job-icons').innerHTML=n?Array.from({length:n},()=>'<i></i>').join('')+`<span>${jobsNeeded} jobs cover year one</span>`:'';
+  try{localStorage.setItem('brooks-roi',JSON.stringify(ids.map(i=>document.getElementById(i).value)))}catch(e){}
+}
+try{const s=JSON.parse(localStorage.getItem('brooks-roi')||'null');if(Array.isArray(s))s.forEach((v,i)=>{if(v!=null)document.getElementById(ids[i]).value=v})}catch(e){}
+ids.forEach(i=>document.getElementById(i).addEventListener('input',calc));
+calc();
+</script>
